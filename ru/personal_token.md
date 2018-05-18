@@ -1,20 +1,18 @@
-# Персональный токен
+# Personal token
 
-Персональный токен служит для упрощения интеграции с Хантфлоу API и не требует дополнительного процесса авторизации. Наиболее частым применением может служить интеграция серверных скриптов или приложений (например, сбор откликов с корпоративного сайта) с Хантфлоу.
+Personal token simplifies integrations with the Huntflow API without additional authorization. The most frequent use is server scripts or applications integration with Huntflow (e.g. collecting responses from a corporate website).
 
-Для получения персонального токена вам необходимо отправив заявку на [hello@huntflow.ru](mailto:hello@huntflow.ru) с указанием пользователя Хантфлоу, для которого необходимо получить токен.
+To get a personal token, send an application to [hello@huntflow.ru](mailto:hello@huntflow.ru). State a Huntflow username requiring a personal token in the e-mail.
 
-Внимание! Использование персонального токена требует более высокого уровня безопасности в вопросах его хранения и несанкционированного доступа.
+Warning! Зersonal token usage requires higher level of security for storage and unauthorized access issues. 
 
-### Использование персонального токена
+### Personal token usage
 
-Использование персонального токена происходит аналогично `access_token`, полученному при [OAuth 2.0 авторизации](authorization.md). 
-Приложение должно использовать полученный токен при запросах, 
-передавая его в заголовке в формате:
-
+Personal token is used similar to  `access_token`aquired by [OAuth 2.0 authorization](authorization.md). 
+The application must use the aquired token in requests, stating it in a header as:
 ```Authorization: Bearer <personal_token>```
 
-Для тестирования токена, удобно использовать метод [/me](user.md#me).
+To test a token, use the method [/me](user.md#me).
 
 ```http
 GET /me HTTP/1.1
