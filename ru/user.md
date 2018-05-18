@@ -1,13 +1,12 @@
-# Основная информация
+# Basic information
 
-* [Получение информации о текущем пользователе](#me)
-* [Получение информации о доступных организациях](#organizations)
+* [Getting information about the current user](#me)
+* [Getting information about available organizations](#organizations)
 
 <a name="me"></a>
-## Получение информации о текущем пользователе
+## Getting information about the current user
 
-`GET /me` вернёт информацию о текущем авторизованном пользователе.
-В случае некорректной авторизации сервер вернёт в ответ `403 Forbidden`.
+`GET /me` returns information about the current user. In case of invalid authorization the server will return the message`403 Forbidden`.
 
 ```json
 {
@@ -21,20 +20,20 @@
 ```
 
 
- Имя | Тип | Описание
+ Name | Type | Description
  --- | --- | ---
- id | number | Идентификатор пользователя
- name | string | Имя пользователя
- position | string | Должность
- email | string | Адрес электронной почты
- phone | string | Номер телефона
- locale | string | Используемая пользователем локаль ([справочник локалей](dicts.md#locale))
+ id | number | User ID
+ name | string | User name
+ position | string | User occupation
+ email | string | Email adress
+ phone | string | Phone number
+ locale | string | The user's locale ([the guide on locales](dicts.md#locale))
 
 
 <a name="organizations"></a>
-## Получение информации о доступных организациях
+## Getting information about available organizations
 
-`GET /accounts` вернёт список доступных организаций пользователя.
+`GET /accounts` returns the list of user's available organizations.
 
 ```json
 {
@@ -56,9 +55,9 @@
 ```
 
 
-Имя | Тип | Описание
+name | type | description
  --- | --- | ---
- id | number | Идентификатор организации (используется для запросов данных по организации)
- name | string | Название организации
- nick | string | Короткий идентификатор организации (используется на сайте, например, `/my/tellur`)
- member_type | string | Роль в организации (описание ролей: [справочник ролей](dicts.md#member_type))
+ id | number | Organization ID (used for organization data requests)
+ name | string | The name of the organization
+ nick | string | Short organization name (used on the website, e.g. `/my/tellur`)
+ member_type | string | The role in the organization (the description of roles: [the guide on roles](dicts.md#member_type))
